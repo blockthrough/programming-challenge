@@ -1,0 +1,21 @@
+{
+  "name": "blockthrough-potluck",
+  "version": "1.0.0",
+  "description": "A nodejs programming challenge",
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "3.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockthrough/programming-challenge.git"
+  },
+  "author": "Raiyan Kamal <raiyan@blockthrough.com>",
+  "bugs": {
+    "url": "https://github.com/blockthrough/programming-challenge/issues"
+  },
+  "homepage": "https://github.com/blockthrough/programming-challenge#readme"
+}
