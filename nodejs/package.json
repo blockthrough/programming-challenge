@@ -1,6 +1,6 @@
 {
   "name": "blockthrough-potluck",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nodejs programming challenge",
   "main": "index.js",
   "devDependencies": {
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/blockthrough/programming-challenge.git"
   },
-  "author": "Raiyan Kamal <raiyan@blockthrough.com>",
+  "author": "Matt Davis <mdavis@virtustructure.com>",
   "bugs": {
     "url": "https://github.com/blockthrough/programming-challenge/issues"
   },
