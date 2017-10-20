@@ -1,5 +1,6 @@
+
 const assert = require('assert');
-const {howManyServings} = require('./index');
+const howManyServings = require('./index');
 const inputs = require('./inputs')
 
 describe('Nomnomthrough', () => {
