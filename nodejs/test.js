@@ -53,4 +53,10 @@ describe('Nomnomthrough', () => {
       assert.equal(output, 2);
     });
   });
+  describe('When the recipe calls for float of an ingredient', () => {
+    it('should return 2', () => {
+      const output = howManyServings(inputs.floatServings);
+      assert.equal(output, 1);
+    });
+  });
 });

@@ -9,7 +9,7 @@ function howManyServings (params) {
       return 0;
     }
   }
-  return currentMin
+  return Math.floor(currentMin)
 }
 
 module.exports = {howManyServings}

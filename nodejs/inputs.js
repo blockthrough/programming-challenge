@@ -94,4 +94,16 @@ module.exports = {
       jam: 5
     }
   },
+  floatServings: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 5
+    },
+    inventory: {
+      bread: 10.5,
+      peanutButter: 5.5,
+      jam: 5.5
+    }
+  }
 }
