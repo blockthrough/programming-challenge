@@ -17,7 +17,7 @@ describe('Nomnomthrough', () => {
   });
   describe('When there is enough for one hundred servings', () => {
   	it('should return 1000', () => {
-  		const output = howManyServings(inputs.onehundredServings);
+  		const output = howManyServings(inputs.onethousandServings);
   		assert.equal(output, 1000);
   	});
   });
