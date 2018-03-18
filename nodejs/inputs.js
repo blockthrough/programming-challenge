@@ -25,7 +25,7 @@ module.exports = {
     }
   },
 
-  onehundredServings: {
+  onethousandServings: {
     recipe: {
       bread: 1,
       peanutButter: 1,
