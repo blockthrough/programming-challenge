@@ -15,7 +15,7 @@ describe('Nomnomthrough', () => {
   		assert.equal(output, 2);
   	});
   });
-  describe('When there is enough for one hundred servings', () => {
+  describe('When there is enough for one thousand servings', () => {
   	it('should return 1000', () => {
   		const output = howManyServings(inputs.onethousandServings);
   		assert.equal(output, 1000);
