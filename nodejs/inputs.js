@@ -1,4 +1,16 @@
 module.exports = {
+  zeroServings: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 10
+    },
+    inventory: {
+      bread: 20,
+      peanutButter: 10,
+      jam: 9
+    }
+  },
   oneServing: {
     recipe: {
       bread: 10,
@@ -61,6 +73,19 @@ module.exports = {
       bread: 20,
       peanutButter: 10,
       jam: '10'
+    }
+  },
+
+  negativeintegerValue: {
+    recipe: {
+      bread: -10,
+      peanutButter: 5,
+      jam: 5
+    },
+    inventory: {
+      bread: 20,
+      peanutButter: 10,
+      jam: 10
     }
   },
 }
