@@ -18,9 +18,9 @@ function howManyServings (params) {
   // round it down because there can't be a fraction of an ingredient, we can only use 
   // what is enough for the recipe */
 
-  var bread_confirm = Math.floor(inventory.bread / recipe.bread);
-  var peanutButter_confirm = Math.floor(inventory.peanutButter / recipe.peanutButter);
-  var jam_confirm = Math.floor(inventory.jam / recipe.jam);
+  var bread_confirm = Math.floor(inventory.bread / recipe.bread)
+  var peanutButter_confirm = Math.floor(inventory.peanutButter / recipe.peanutButter)
+  var jam_confirm = Math.floor(inventory.jam / recipe.jam)
 
   minimum_servings = Math.min(bread_confirm, peanutButter_confirm, jam_confirm)
   return minimum_servings 
