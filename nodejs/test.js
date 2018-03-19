@@ -3,6 +3,12 @@ const {howManyServings} = require('./index');
 const inputs = require('./inputs')
 
 describe('Nomnomthrough', () => {
+  describe('When there is not enough for any servings', () => {
+  	it('should return 0', () => {
+  		const output = howManyServings(inputs.zeroServings);
+  		assert.equal(output, 0);
+  	});
+  });
   describe('When there is enough ingredient for one serving', () => {
     it('should return 1', () => {
       const output = howManyServings(inputs.oneServing);
@@ -30,7 +36,13 @@ describe('Nomnomthrough', () => {
   describe('When the amount is a number in a string', () => {
   	it('should throw a TypeError', () => {
   		const output = howManyServings(inputs.numberString);
-  		assert.ok(output, 'Only integers can be used as values!')
+  		assert.ok(output, 'Only integers can be used as values!');
   	});
   });
+  describe('When the value is a negative integer', () => {
+  	it('should throw an Error', () => {
+  		const output = howManyServings(inputs.negativeintegerValue);
+  		assert.ok(output, 'Only positive integers are valid!');
+  	});
+  });  
 });
