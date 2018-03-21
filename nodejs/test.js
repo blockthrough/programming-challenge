@@ -44,5 +44,11 @@ describe('Nomnomthrough', () => {
   		const output = howManyServings(inputs.negativeintegerValue);
   		assert.ok(output, 'Only positive integers are valid!');
   	});
+  });
+  describe('When the inventory is missing a key', () => {
+  	it('should throw an Error', () => {
+  		const output = howManyServings(inputs.missingEntry);
+  		assert.ok(output, 'You are missing ingredient entries in your inventory!');
+  	});
   });  
 });
