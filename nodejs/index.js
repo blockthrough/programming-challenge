@@ -14,13 +14,20 @@ function howManyServings (params) {
   	}
   }
 
+  // if there is an entry in the recipe but not the inventory
+  for (var ingredients in recipe) {  	
+  	if (!(ingredients in inventory)) {
+  		return new Error('You are missing ingredient entries in your inventory!')
+  	}
+  }
+
   // Divide the amount in the inventory by the amount required for the recipe
   // round it down because there can't be a fraction of an ingredient, we can only use 
   // what is enough for the recipe */
 
-  var bread_confirm = Math.floor(inventory.bread / recipe.bread)
-  var peanutButter_confirm = Math.floor(inventory.peanutButter / recipe.peanutButter)
-  var jam_confirm = Math.floor(inventory.jam / recipe.jam)
+  var bread_confirm = Math.floor(inventory.bread / recipe.bread);
+  var peanutButter_confirm = Math.floor(inventory.peanutButter / recipe.peanutButter);
+  var jam_confirm = Math.floor(inventory.jam / recipe.jam);
 
   minimum_servings = Math.min(bread_confirm, peanutButter_confirm, jam_confirm)
   return minimum_servings 
