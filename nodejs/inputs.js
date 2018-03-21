@@ -88,4 +88,16 @@ module.exports = {
       jam: 10
     }
   },
+
+  missingEntry: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 5
+    },
+    inventory: {
+      bread: 20,
+      peanutButter: 10,
+    }
+  },
 }
