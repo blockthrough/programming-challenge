@@ -22,6 +22,19 @@ function howManyServings (params) {
   		throw new Error("Items in inventory and recipe don't match");	
   	}
   }
+
+  // If we know for sure what are the ingredients and that the structures of both inventory and recipe dictionaries are always the same, 
+  // then it's pretty straight forward: (uncomment for testing).
+
+  // while(((inventory["bread"] - recipe["bread"]) >= 0) && ((inventory["peanutButter"] - recipe["peanutButter"]) >= 0) &&((inventory["jam"] - recipe["jam"]) >= 0)){
+  //  count +=1;
+  //  inventory["bread"] = inventory["bread"] - recipe["bread"];
+  //  inventory["peanutButter"] = inventory["peanutButter"] - recipe["peanutButter"];
+  //  inventory["jam"] = inventory["jam"] - recipe["jam"];
+  // }
+  // return count
+
+  //If not:
   var ingredients = []
   for (var i = 0; i < Object.keys(inventory).length;i++){
   	ingredients.push(Math.floor(inventory[Object.keys(inventory)[i]] / recipe[Object.keys(recipe)[i]]));
