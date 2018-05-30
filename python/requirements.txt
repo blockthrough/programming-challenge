@@ -1,0 +1,7 @@
+Python's native unittest was used. Therefore no additional libraries needed to evaluate.
+
+Steps Needed:
+  1. Download the source code from github
+  2. Open terminal / command prompt
+  3. Navigate to the python directory
+  4. Execute 'python .\test.py' for the test
