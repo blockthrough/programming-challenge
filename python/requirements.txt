@@ -1,0 +1,11 @@
+The framework used for unit tests is the 'unittest' library
+Since 'unittest' is a standard library (assuming you are using Python 2.1 or greater); thus, there is no need to install any third-party libraries.
+
+Once the target directory is open in Terminal, unit tests can be run using the following command line: 
+$ python -m unittest tests
+
+Note that '-m' option simply commands the terminal to search for the 'unittest' module and run the corresponding '.py' file – 'tests.py' in this case – as a script.
+
+The above command line will give us an absolute path to 'tests.py,' though. This eliminates the need for the Terminal to search for a file that contains the 'unittest' module. 
+
+If all assertions return True, then "OK" will be printed to the console.
