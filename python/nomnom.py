@@ -1,7 +1,7 @@
 # two inputs must be given to the 'how_many_servings' function:
-# first is a recipe dictionary
-# second arguments is the inventory dictionary
-# they keys of both dictionaries are (type: string) and their values are (type: int)
+# first argument is the recipe dictionary
+# second argument is the inventory dictionary
+# the keys of both dictionaries are (type: string) and their values are (type: int)
 # the function outputs an integer, which is the number of servings that can be made
 
 
