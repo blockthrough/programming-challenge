@@ -28,7 +28,7 @@ def how_many_servings(recipe, inventory):
             raise TypeError("The name of the ingredients in the recipe must be strings!")
 
         # raises a "TypeError" if the values used in the dictionary are not integers
-        # based on requirements in the "README.md" file, the values must be integers; thus, even floating points will result in a "ValueError."
+        # based on requirements in the "README.md" file, the values must be integers; thus, even floating points will result    in a "ValueError."
         elif (type(recipe[key]) != int):
             raise TypeError(
                 "The units of each serving - the values - must be integers or decimals!")
