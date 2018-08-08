@@ -13,6 +13,7 @@ module.exports = {
     }
   },
 
+  //Enough for multiple servings
   multipleServings: {
     recipe: {
       bread: 10,

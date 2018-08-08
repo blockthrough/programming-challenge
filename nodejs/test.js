@@ -15,7 +15,7 @@ describe('Nomnomthrough', () => {
   describe('When there is enough ingredients for multiple servings', () => {
     it('should return 196', () => {
       const output = howManyServings(inputs.multipleServings);
-      assert.equal(output, 1);
+      assert.equal(output, 196);
     });
   });
 
