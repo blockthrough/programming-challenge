@@ -2,6 +2,7 @@ const assert = require('assert');
 const {howManyServings} = require('./index');
 const inputs = require('./inputs');
 
+
 describe('Nomnomthrough', () => {
   //Enough ingredients for 1 serving
   describe('When there is enough ingredient for one serving', () => {
