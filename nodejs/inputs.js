@@ -194,5 +194,5 @@ module.exports = {
       peanutButter: -10,
       jam: -5
     }
-  },
+  }
 }
