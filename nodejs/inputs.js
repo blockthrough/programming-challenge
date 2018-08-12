@@ -123,4 +123,16 @@ module.exports = {
       jam: 'five'
     }
   },
+  oneServingWithFloatQuantities: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 5.2
+    },
+    inventory: {
+      bread: 20.2,
+      peanutButter: 10.2,
+      jam: 5.2
+    }
+  },
 }
