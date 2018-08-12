@@ -45,4 +45,22 @@ describe('Nomnomthrough', () => {
       assert.equal(output, 0);
     });
   });
+  describe('When no ingredient is defined in recipe', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.noIngredientInRecipe);
+      assert.equal(output, 0);
+    });
+  });
+  describe('When no ingredient is defined in inventory', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.noIngredientInInventory);
+      assert.equal(output, 0);
+    });
+  });
+  describe('When no ingredient is defined in recipe and inventory', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.noIngredientInRecipeAndInventory);
+      assert.equal(output, 0);
+    });
+  });
 });

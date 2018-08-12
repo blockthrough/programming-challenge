@@ -6,6 +6,12 @@ function howManyServings (params) {
     return 0;
   }
 
+  // If recipe or inventory or both have no ingredients, nothing
+  // can be prepared
+  if(Object.keys(recipe).length === 0 || Object.keys(inventory).length === 0){
+    return 0;
+  }
+
   let servings = Number.MAX_VALUE;
 
   for(let ingredient in recipe){
@@ -13,6 +19,7 @@ function howManyServings (params) {
     let quantity = recipe[ingredient];
 
     // If quantity of ingredient required for recipe is zero, essentialy skip
+    // checking for this particular ingredient
     if(quantity === 0){
       continue;
     }

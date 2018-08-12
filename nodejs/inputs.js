@@ -74,5 +74,29 @@ module.exports = {
       peanutButter: 5,
       jam: 5
     }
-  }
+  },
+  noIngredientInRecipe: {
+    recipe: {
+    },
+    inventory: {
+      bread: 20,
+      peanutButter: 10,
+      jam: 5
+    }
+  },
+  noIngredientInInventory: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 5
+    },
+    inventory: {
+    }
+  },
+  noIngredientInRecipeAndInventory: {
+    recipe: {
+    },
+    inventory: {
+    }
+  },
 }
