@@ -6,9 +6,22 @@ function howManyServings (params) {
     return 0;
   }
 
-  // If recipe or inventory or both have no ingredients, nothing
-  // can be prepared
+  // If recipe or inventory or both have no ingredients,
+  // nothing can be served
   if(Object.keys(recipe).length === 0 || Object.keys(inventory).length === 0){
+    return 0;
+  }
+
+  // Validate that if quantity is not strictly defined as a Number,
+  // NaN check will let stringified number pass
+  // Could also have thrown an error here
+  function isNumberValidation(quantity){
+    return typeof(quantity) === "number";
+  }
+
+  const recipeContainsNaN = !Object.values(recipe).every(isNumberValidation);
+  const inventoryContainsNaN = !Object.values(inventory).every(isNumberValidation);
+  if(recipeContainsNaN || inventoryContainsNaN){
     return 0;
   }
 
@@ -34,7 +47,6 @@ function howManyServings (params) {
     // be partial
     let ingredient_serving = Math.floor(inventory[ingredient]/quantity);
     servings = Math.min(servings, ingredient_serving);
-
   }
 
   return servings;

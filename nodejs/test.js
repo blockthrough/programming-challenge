@@ -63,4 +63,16 @@ describe('Nomnomthrough', () => {
       assert.equal(output, 0);
     });
   });
+  describe('When recipe contains ingredient which is NaN', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.recipeContainsNaN);
+      assert.equal(output, 0);
+    });
+  });
+  describe('When ingredient contains ingredient which is NaN', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.inventoryContainsNaN);
+      assert.equal(output, 0);
+    });
+  });
 });
