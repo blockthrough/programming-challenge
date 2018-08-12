@@ -60,5 +60,19 @@ module.exports = {
       peanutButter: 10,
       jam: 5
     }
+  },
+  inventoryNotDefined: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 5
+    }
+  },
+  recipeNotDefined: {
+    inventory: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 5
+    }
   }
 }

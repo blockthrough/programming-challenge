@@ -27,4 +27,22 @@ describe('Nomnomthrough', () => {
       assert.equal(output, 1);
     });
   });
+  describe('When inventory lacks ingredients for recipe', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.lackingInventory);
+      assert.equal(output, 0);
+    });
+  });
+  describe('When inventory is not defined', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.inventoryNotDefined);
+      assert.equal(output, 0);
+    });
+  });
+  describe('When recipe is not defined', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.recipeNotDefined);
+      assert.equal(output, 0);
+    });
+  });
 });

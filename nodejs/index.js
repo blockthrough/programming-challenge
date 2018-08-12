@@ -1,5 +1,11 @@
 function howManyServings (params) {
   const {recipe, inventory} = params
+
+  // If recipe or inventory is undefined, don't proceed further
+  if(typeof recipe === 'undefined' || typeof inventory === 'undefined'){
+    return 0;
+  }
+
   let servings = Number.MAX_VALUE;
 
   for(let ingredient in recipe){
