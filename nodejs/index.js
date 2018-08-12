@@ -14,14 +14,23 @@ function howManyServings (params) {
 
   // Validate that if quantity is not strictly defined as a Number,
   // NaN check will let stringified number pass
-  // Could also have thrown an error here
-  function isNumberValidation(quantity){
+  // Could also have thrown an error here, and could be moved to a util file
+  function isNumber(quantity){
     return typeof(quantity) === "number";
   }
+  function isPostive(quantity){
+    return quantity >= 0;
+  }
+  function quantityValidation(quantity){
+    return isNumber(quantity) && isPostive(quantity);
+  }
 
-  const recipeContainsNaN = !Object.values(recipe).every(isNumberValidation);
-  const inventoryContainsNaN = !Object.values(inventory).every(isNumberValidation);
-  if(recipeContainsNaN || inventoryContainsNaN){
+  const isQuantityAcceptable = [
+    ...Object.values(recipe),
+    ...Object.values(inventory)
+  ].every(quantityValidation);
+
+  if(!isQuantityAcceptable){
     return 0;
   }
 

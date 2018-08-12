@@ -158,5 +158,41 @@ module.exports = {
       peanutButter: 10,
       jam: 0
     }
-  }
+  },
+  negativeQuantityInRecipe: {
+    recipe: {
+      bread: -10,
+      peanutButter: -5,
+      jam: -5
+    },
+    inventory: {
+      bread: 20,
+      peanutButter: 10,
+      jam: 5
+    }
+  },
+  negativeQuantityInInventory: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 5
+    },
+    inventory: {
+      bread: -20,
+      peanutButter: -10,
+      jam: -5
+    }
+  },
+  negativeQuantityInBoth: {
+    recipe: {
+      bread: -10,
+      peanutButter: -5,
+      jam: -5
+    },
+    inventory: {
+      bread: -20,
+      peanutButter: -10,
+      jam: -5
+    }
+  },
 }

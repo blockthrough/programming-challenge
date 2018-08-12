@@ -93,4 +93,22 @@ describe('Nomnomthrough', () => {
       assert.equal(output, 0);
     });
   });
+  describe('When recipe contains ingredient with Negative Quantity', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.negativeQuantityInRecipe);
+      assert.equal(output, 0);
+    });
+  });
+  describe('When inventory contains ingredient with Negative Quantity', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.negativeQuantityInInventory);
+      assert.equal(output, 0);
+    });
+  });
+  describe('When recipe and inventory both contains ingredient with Negative Quantity', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.negativeQuantityInBoth);
+      assert.equal(output, 0);
+    });
+  });
 });
