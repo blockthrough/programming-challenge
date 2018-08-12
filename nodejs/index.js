@@ -38,7 +38,7 @@ function howManyServings (params) {
     }
 
     // If recipe ingredient is not present in inventory, nothing can be served
-    if(!(ingredient in inventory) || inventory[ingredient] === 0){
+    if(!(ingredient in inventory)){
       return 0;
     }
 

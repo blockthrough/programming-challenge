@@ -135,4 +135,28 @@ module.exports = {
       jam: 5.2
     }
   },
+  zeroQuantityInRecipe: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 0
+    },
+    inventory: {
+      bread: 20,
+      peanutButter: 10,
+      jam: 5
+    }
+  },
+  zeroQuantityInInventory: {
+    recipe: {
+      bread: 10,
+      peanutButter: 5,
+      jam: 5
+    },
+    inventory: {
+      bread: 20,
+      peanutButter: 10,
+      jam: 0
+    }
+  }
 }

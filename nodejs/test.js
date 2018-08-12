@@ -81,4 +81,16 @@ describe('Nomnomthrough', () => {
       assert.equal(output, 1);
     });
   });
+  describe('When recipe contains ingredient with Zero Quantity', () => {
+    it('should return 2', () => {
+      const output = howManyServings(inputs.zeroQuantityInRecipe);
+      assert.equal(output, 2);
+    });
+  });
+  describe('When inventory contains ingredient with Zero Quantity', () => {
+    it('should return 0', () => {
+      const output = howManyServings(inputs.zeroQuantityInInventory);
+      assert.equal(output, 0);
+    });
+  });
 });
