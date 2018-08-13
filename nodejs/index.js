@@ -7,12 +7,23 @@ function howManyServings(params) {
   }
 
   for (let ingredient in recipe) {
+    if (typeof ingredient !== 'string' || !isNaN(ingredient)) {
+      throw new TypeError('Ingredient name should be a string');
+    }
+    if (isNaN(recipe[ingredient]) || !Number.isInteger(recipe[ingredient])) {
+      throw new TypeError('Ingredient is not an integer');
+    }
     // If the ingredient in the recipe is less than or greater than 0, we can skip
     if (recipe[ingredient] <= 0) {
       continue;
     }
-    // Determine if there is a valid ingredient in the inventory
-    if (!inventory[ingredient] || inventory[ingredient] <= 0) {
+    if (!inventory[ingredient]) {
+      return 0;
+    }
+    if (isNaN(inventory[ingredient]) || !Number.isInteger(inventory[ingredient])) {
+      throw new TypeError('Ingredient is not an integer');
+    }
+    if (inventory[ingredient] <= 0) {
       return 0;
     }
 

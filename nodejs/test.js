@@ -64,4 +64,37 @@ describe('Nomnomthrough', () => {
       assert.equal(output, 0);
     });
   });
+
+  describe('When there is no...', () => {
+    it('Recipe - should throw an Error', () => {
+      assert.throws(() => howManyServings(inputs.noRecipe), /object is expected/, "Should throw Error");
+    });
+    it('Inventory - should throw an Error', () => {
+      assert.throws(() => howManyServings(inputs.noInventory), /object is expected/, "Should throw Error");
+    });
+  });
+
+  describe('When the ingredient is Not a Number', () => {
+    it('Recipe ingredient has a NaN should throw a TypeError', () => {
+      assert.throws(() => howManyServings(inputs.NaNRecipe), /not an integer/, "Should throw TypeError");
+    });
+    it('Inventory ingredient has a NaN should throw a TypeError', () => {
+      assert.throws(() => howManyServings(inputs.NaNInventory), /not an integer/, "Should throw TypeError");
+    });
+  });
+
+  describe('When the ingredient is not an Integer', () => {
+    it('Recipe ingredient has a float should throw a TypeError', () => {
+      assert.throws(() => howManyServings(inputs.floatRecipeIngredient), /not an integer/, "Should throw TypeError");
+    });
+    it('Inventory ingredient has a float should throw a TypeError', () => {
+      assert.throws(() => howManyServings(inputs.floatInventoryIngredient), /not an integer/, "Should throw TypeError");
+    });
+  });
+
+  describe('When the key is not a String', () => {
+    it('Recipe name is a number should throw a TypeError', () => {
+      assert.throws(() => howManyServings(inputs.numberRecipeName), /should be a string/, "Should throw TypeError");
+    });
+  });
 });
