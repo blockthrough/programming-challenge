@@ -17,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/blockthrough/programming-challenge/issues"
   },
-  "homepage": "https://github.com/blockthrough/programming-challenge#readme"
+  "homepage": "https://github.com/blockthrough/programming-challenge#readme",
+  "dependencies": {}
 }
